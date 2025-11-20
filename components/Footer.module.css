@@ -1,0 +1,262 @@
+.footer {
+  background: #fbfaf7;
+  padding: 60px 80px 30px 80px;
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.left {
+  width: 35%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.bookIcon {
+  font-size: 28px;
+}
+
+.desc {
+  margin: 15px 0 25px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #444;
+}
+
+/* NEWSLETTER */
+.newsletterBox {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.nlTitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.nlInput {
+  display: flex;
+  width: 100%;
+}
+
+.nlInput input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 15px;
+}
+
+.nlBtn {
+  background: #d98b16;
+  width: 55px;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+}
+
+.social {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+  font-size: 22px;
+}
+
+/* RIGHT COLUMNS */
+.columns {
+  display: flex;
+  gap: 80px;
+}
+
+.col h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.col a {
+  display: block;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+.col a:hover {
+  color: #d98b16;
+}
+
+/* Divider */
+.line {
+  margin: 40px 0 20px;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+/* Bottom */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottomLinks a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000;
+}
+.bookIcon {
+  color: #d98b16;
+}
+/* ===================================== */
+/* RESPONSIVENESS ADDED FOR ALL SCREENS  */
+/* ===================================== */
+
+/* Large Tablets (max-width: 1100px) */
+@media (max-width: 1100px) {
+  .footer {
+    padding: 50px 50px 30px 50px;
+  }
+  .footerContainer {
+    gap: 40px;
+  }
+  .columns {
+    gap: 50px;
+  }
+}
+
+/* Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+  .footerContainer {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .columns {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .col {
+    width: 45%;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .bottomLinks a {
+    margin: 0 10px;
+  }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 25px 25px 25px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .social {
+    font-size: 20px;
+  }
+
+  .columns {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .col a {
+    font-size: 14px;
+  }
+
+  .newsletterBox {
+    padding: 15px;
+  }
+
+  .nlInput input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .nlBtn {
+    width: 50px;
+    font-size: 18px;
+  }
+
+  .bottomLinks a {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile (max-width: 400px) */
+@media (max-width: 400px) {
+  .brand {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .social {
+    gap: 14px;
+    font-size: 18px;
+  }
+
+  .nlBtn {
+    width: 45px;
+  }
+
+  .columns {
+    gap: 25px;
+  }
+
+  .col h3 {
+    font-size: 16px;
+  }
+
+  .col a {
+    font-size: 13px;
+  }
+
+  .bottom {
+    font-size: 13px;
+  }
+}
