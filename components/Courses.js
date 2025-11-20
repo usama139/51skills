@@ -72,7 +72,7 @@ export default function Courses() {
       price: "$69.99",
       time: "2h 35m",
       modules: "15 modules",
-      level: "Beginner",
+      level: "Beginner", 
     },
   ];
 
