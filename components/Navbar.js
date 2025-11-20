@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
-import { Search, Globe, BookOpen, ShoppingCart, Bell, User, Sun, Menu, X } from "lucide-react";
+import { Search, Globe, BookOpen, ShoppingCart, Bell, User, Sun, Menu } from "lucide-react";
 
 export default function Navbar() {
   const [cartCount] = useState(0);
@@ -13,31 +13,7 @@ export default function Navbar() {
   const [hoverTimeout, setHoverTimeout] = useState(null); // Track the timeout for hover
   const [themeMode, setThemeMode] = useState("system"); // Track the current theme mode
 
-  const handleMouseEnter = (item) => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout); // Clear the previous timeout if any
-    }
-    setActiveDropdown(item); // Optionally, you can enable hover behavior
-  };
-
-  const handleMouseLeave = () => {
-    // Set a delay to keep the dropdown visible for 1 second
-    const timeout = setTimeout(() => {
-      setActiveDropdown(null); // Close the dropdown after 1 second
-    }, 1000); // 1 second delay
-    setHoverTimeout(timeout); // Store the timeout ID to clear it if necessary
-  };
-
-  // Toggle function for click event, closes the previous dropdown if another one is clicked
-  const handleClick = (item) => {
-    if (activeDropdown === item) {
-      setActiveDropdown(null); // If the clicked item is already open, close it
-    } else {
-      setActiveDropdown(item); // Otherwise, open the clicked item and close the previous one
-    }
-  };
-
-  // Handle theme mode change
+  // Toggle function for theme
   const handleThemeChange = (mode) => {
     setThemeMode(mode);
     if (mode === "light") {
@@ -46,6 +22,28 @@ export default function Navbar() {
       document.documentElement.setAttribute("data-theme", "dark");
     } else {
       document.documentElement.removeAttribute("data-theme");
+    }
+  };
+
+  const handleMouseEnter = (item) => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout); // Clear the previous timeout if any
+    }
+    setActiveDropdown(item); // Optionally, you can enable hover behavior
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null); // Close the dropdown after 1 second
+    }, 1000); // 1 second delay
+    setHoverTimeout(timeout); // Store the timeout ID to clear it if necessary
+  };
+
+  const handleClick = (item) => {
+    if (activeDropdown === item) {
+      setActiveDropdown(null); // If the clicked item is already open, close it
+    } else {
+      setActiveDropdown(item); // Otherwise, open the clicked item and close the previous one
     }
   };
 
@@ -125,7 +123,7 @@ export default function Navbar() {
 
           {/* Right Icons */}
           <div className={styles.right}>
-            {/* Color Mode (Sun) Icon */}
+            {/* Theme Mode Icon */}
             <div
               className={styles.iconBtn1}
               onClick={() => handleClick('theme')}

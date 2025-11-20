@@ -1,22 +1,29 @@
+/* Global Styles */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --button-bg: #f7a500;
+  --button-text: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Light Mode default */
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #171717;
+  --button-bg: #f7a500;
+  --button-text: white;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Dark Mode */
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --button-bg: #374151;
+  --button-text: white;
 }
 
-body {
+/* Apply background and foreground color globally */
+html, body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
@@ -24,19 +31,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darken(var(--button-bg), 10%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
