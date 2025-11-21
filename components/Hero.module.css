@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 1% 150px 2%;
-  background: #fafafa;
+  background: var(--color-hero-bg);
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -29,7 +29,7 @@
   font-size: 75px;
   font-weight: 700;
   line-height: 1;
-  color: #1a1a1a;
+  color: var(--color-heading);
 }
 .title span {
   color: #f4a300;
@@ -38,7 +38,7 @@
 .subtitle {
   margin-top: 24px;
   font-size: 18px;
-  color: #000;
+  color: var(--color-text);
   line-height: 1.5;
   font-weight: 800;
   font-family: Poppins, sans-serif;
@@ -81,13 +81,13 @@
 }
 
 .getStarted {
-  background: #000;
-  color: #fff;
+  background: var(--color-heading);
+  color: var(--color-bg);
 }
 
 .browse {
-  background: #fff;
-  border: 2px solid #ddd;
+  background: var(--color-card);
+  border: 2px solid var(--color-border);
   color: #f4a300;
 }
 
@@ -119,28 +119,28 @@
   top: 0;
   height: 100%;
   width: 400px;
-  background: linear-gradient(to right, #fafafa 0%, rgba(255,255,255,0) 60%);
+  background: linear-gradient(to right, var(--color-hero-overlay) 0%, rgba(255,255,255,0) 60%);
 }
 .fadeRight {
   right: 0;
   top: 0;
   height: 100%;
   width: 400px;
-  background: linear-gradient(to left, #fafafa 0%, rgba(255,255,255,0) 60%);
+  background: linear-gradient(to left, var(--color-hero-overlay) 0%, rgba(255,255,255,0) 60%);
 }
 .fadeTop {
   top: 0;
   left: 0;
   width: 100%;
   height: 300px;
-  background: linear-gradient(to bottom, #fafafa 0%, rgba(255,255,255,0) 60%);
+  background: linear-gradient(to bottom, var(--color-hero-overlay) 0%, rgba(255,255,255,0) 60%);
 }
 .fadeBottom {
   bottom: 0;
   left: 0;
   width: 100%;
   height: 300px;
-  background: linear-gradient(to top, #fafafa 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to top, var(--color-hero-overlay) 0%, rgba(255,255,255,0) 100%);
 }
 
 /* Columns wrapper */
@@ -197,7 +197,7 @@
   position: relative;
   width: var(--card-w);
   height: var(--card-h);
-  background: #ddd;
+  background: var(--color-card);
   border-radius: 14px;
   overflow: hidden;
   filter: drop-shadow(0 8px 25px rgba(0,0,0,0.15));

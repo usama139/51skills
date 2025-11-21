@@ -1,10 +1,5 @@
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Hero from "@/components/Hero";
-import FeaturesSection from "@/components/FeaturesSection";
-import Courses from "@/components/Courses";
-import StudentStories from "@/components/StudentStories";
-import LevelUpSection from "@/components/LevelUpSection";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -17,13 +12,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <Hero />
-        <FeaturesSection />
-        <Courses />
-        <StudentStories />
-        <LevelUpSection   />
+        <main>{children}</main>
         <Footer />
-        {children}
       </body>
     </html>
   );

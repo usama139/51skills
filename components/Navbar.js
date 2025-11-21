@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import styles from "./Navbar.module.css";
 import { Search, Globe, BookOpen, ShoppingCart, Bell, User, Sun, Menu } from "lucide-react";
 
 export default function Navbar() {
+  const router = useRouter();
   const [cartCount] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -18,10 +19,13 @@ export default function Navbar() {
     setThemeMode(mode);
     if (mode === "light") {
       document.documentElement.setAttribute("data-theme", "light");
+      document.body?.setAttribute("data-theme", "light");
     } else if (mode === "dark") {
       document.documentElement.setAttribute("data-theme", "dark");
+      document.body?.setAttribute("data-theme", "dark");
     } else {
       document.documentElement.removeAttribute("data-theme");
+      document.body?.removeAttribute("data-theme");
     }
   };
 
@@ -60,7 +64,13 @@ export default function Navbar() {
             </button>
 
             {/* Logo */}
-            <div className={styles.logo}>51Skills</div>
+            <button
+              type="button"
+              className={styles.logo}
+              onClick={() => router.push("/")}
+            >
+              51Skills
+            </button>
 
             {/* Desktop Menu */}
             <div className={styles.menu}>

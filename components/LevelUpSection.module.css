@@ -3,7 +3,7 @@
   text-align: center;
   padding: 60px 0;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(135deg, #fefdf8, #ffecc2);
+  background: linear-gradient(135deg, var(--color-card), var(--color-card-secondary));
 }
 
 /* TITLE */
@@ -25,7 +25,7 @@
 .subtitle {
   margin-top: 10px;
   font-size: 18px;
-  color: #555;
+  color: var(--color-text);
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -61,7 +61,7 @@
   font-size: 16px;
   font-weight: 600;
   background: white;
-  border: 1 solid #ff9e22;
+  border: 1px solid #ff9e22;
   color: #ff9e22;
   cursor: pointer;
   transition: 0.2s ease;
@@ -75,7 +75,7 @@
 .reviewCard {
   width: 70%;
   margin: 50px auto 30px auto;
-  background: linear-gradient(-55deg, #fefdf8, #ffecc2);
+  background: linear-gradient(-55deg, var(--color-card), var(--color-card-secondary));
   padding: 50px 35px;
   border-radius: 22px;
   box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.1);
@@ -91,7 +91,7 @@
 .reviewText {
   font-size: 22px;
   font-style: italic;
-  color: #333;
+  color: var(--color-text);
   margin-bottom: 25px;
 }
 
@@ -123,12 +123,12 @@
 .userName {
   font-size: 17px;
   font-weight: 700;
-  color: #222;
+  color: var(--color-heading);
 }
 
 .userRole {
   font-size: 14px;
-  color: #777;
+  color: var(--color-muted);
 }
 
 /* FEATURES */
@@ -138,7 +138,7 @@
   justify-content: center;
   gap: 50px;
   font-size: 15px;
-  color: #555;
+  color: var(--color-text);
 }
 
 .featureItem {

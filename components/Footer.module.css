@@ -1,8 +1,8 @@
 .footer {
-  background: #fbfaf7;
+  background: var(--color-surface);
   padding: 60px 80px 30px 80px;
   font-family: "Poppins", sans-serif;
-  color: #111;
+  color: var(--color-text);
 }
 
 .footerContainer {
@@ -32,7 +32,7 @@
   margin: 15px 0 25px;
   line-height: 1.6;
   font-size: 16px;
-  color: #444;
+  color: var(--color-text);
 }
 
 /* NEWSLETTER */
@@ -40,7 +40,7 @@
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   margin-top: 10px;
 }
 
@@ -57,7 +57,7 @@
 .nlInput input {
   width: 100%;
   padding: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   border-right: none;
   border-radius: 6px 0 0 6px;
   font-size: 15px;
@@ -89,13 +89,14 @@
 .col h3 {
   font-size: 18px;
   margin-bottom: 18px;
+  color: var(--color-heading);
 }
 
 .col a {
   display: block;
   margin-bottom: 12px;
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   font-size: 15px;
 }
 
@@ -107,7 +108,7 @@
 .line {
   margin: 40px 0 20px;
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--color-border);
 }
 
 /* Bottom */
@@ -120,7 +121,7 @@
 .bottomLinks a {
   margin-left: 25px;
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
 }
 .bookIcon {
   color: #d98b16;

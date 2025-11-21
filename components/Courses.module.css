@@ -3,13 +3,15 @@
   padding: 20px 40px;
   font-family: "Inter", sans-serif;
   margin-top: 50px;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 .heading {
   font-size: 46px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #000;
+  color: var(--color-heading);
   font-family: 'Times New Roman', Times, serif;
   display: inline-block;
 }
@@ -30,12 +32,15 @@
 }
 
 .card {
-  background: #fff;
+  background: var(--color-card);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  border: 1px solid #eee;
+  box-shadow: 0px 2px 6px var(--color-shadow);
+  border: 1px solid var(--color-border);
   transition: 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .card:hover {
@@ -55,7 +60,7 @@
 
 .cardContent h3 {
   font-size: 19px;
-  color: #333;
+  color: var(--color-heading);
   margin-bottom: 8px;
   min-height: 48px;
   font-family: 'Times New Roman', Times, serif;
@@ -69,12 +74,12 @@
 }
 
 .rating span {
-  color: #555;
+  color: var(--color-text);
 }
 
 .teacher {
   font-size: 13px;
-  color: #777;
+  color: var(--color-muted);
   margin-bottom: 10px;
   display: inline-block;
 }
@@ -92,15 +97,15 @@
   flex-wrap: wrap;
   gap: 8px;
   font-size: 12px;
-  color: #666;
+  color: var(--color-text);
   margin-bottom: 15px;
 }
 
 .features span {
-  background: #fff7e6;
+  background: rgba(255, 247, 230, 0.6);
   padding: 4px 8px;
   border-radius: 20px;
-  border: 1px solid #f3d7a7;
+  border: 1px solid rgba(243, 215, 167, 0.7);
 }
 
 .learnMore {
